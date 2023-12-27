@@ -1,0 +1,55 @@
+{% extends "index.html" %}
+
+{% block title %}Profile{% endblock %}
+{% block content %}
+<div class="container my-5">
+          <div class="my-2">
+            <h1><b> Edit Your Profile</b></h1>
+            <hr />
+            <p>
+                Public Profile allows you to share a little bit about yourself with other LocalShop customers. This is how you will be shown to other shoppers on LocalShop when you post Reviews, Q&A, Lists, and more.
+            </p>
+            <div>
+                <form class="row g-3">
+                    <h5>Upload a public profile picture </h5>
+                    <div>
+                        {% if request.user.profilePic is None %}
+                        <i class="fa-solid fa-user fa-2xl"></i>
+                        <div class="mb-3">
+                            <label for="formFile" class="form-label">Choose...</label>
+                            <input class="form-control" type="file" id="formFile">
+                        </div>
+                        {% else %}
+                        <img class="rounded-circle" src="{{request.user.profilePic.url}}" alt="">
+                        {% endif  %}
+                    </div>
+                    <div>
+
+                        {% csrf_token  %}
+                        <div class="col-md-6">
+                            <label for="inputFirstName" class="form-label">First Name</label>
+                            <input type="text" class="form-control" id="inputFirstName" value="{{ request.user.first_name }}">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="inputLastName" class="form-label">LastName</label>
+                            <input type="text" class="form-control" id="inputLastName" value="{{ request.user.last_name }}">
+                        </div>
+                        <div class="col-12">
+                            <label for="inputEmail" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="inputEmail" value="{{ request.user.email }}">
+                        </div>
+
+                        <div class="col-md-6">
+                            <label for="inputPhone" class="form-label">Phone</label>
+                            <input type="tel" class="form-control" id="inputPhone" value="{{ request.user.phone }}">
+                        </div>
+                        <div class="col-12 text-center">
+                            <button type="submit" class="btn btn-outline-warning">Update Profile</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    
+</div>
+{% endblock %}

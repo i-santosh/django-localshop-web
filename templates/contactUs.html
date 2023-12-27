@@ -1,0 +1,29 @@
+{% extends "index.html" %}
+
+{% block title %}Give Feedback {% endblock %}
+{% block content %}
+<div class="container my-5">
+            <div class="my-2">
+            <h1><b>Contact Us</b></h1>
+            <hr />
+            <p>
+                Need help or give suggestions ?
+            </p>
+            <div>
+                <form action="#" method="get" accept-charset="utf-8">
+                    {% csrf_token %}
+                    <div class="input-group mb-3">
+                        <span class="input-group-text" id="basic-addon1">@</span>
+                        <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+                    </div>
+
+                    <div class="form-floating">
+                        <textarea class="form-control" id="floatingTextarea2" style="height: 100px"></textarea>
+                        <label for="floatingTextarea2">Write...</label>
+                    </div>
+                </form>
+            </div>
+        </div>
+    
+</div>
+{% endblock %}

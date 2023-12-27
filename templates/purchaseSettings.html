@@ -1,0 +1,23 @@
+{% extends "index.html" %}
+
+{% block title %}Purchase Settings{% endblock %}
+{% block content %}
+<div class="container my-5">
+    <div class="my-2">
+         <h1><b>Default purchase settings</b></h1>
+            <p>
+                Use this page to set your preferred payment method, shipping address, and shipping method.
+            </p>
+        </div>
+        <div class="card bg-info border border-info bg-opacity-10">
+            <div class="card-body">
+                <p>
+                    Visit <a href="/accounts/user/manageAddresses" class="text-info">Your Addresses</a> to set your preferred address as default shipping address.
+                </p>
+                <p>
+                    Our Default payment method is currently set to <strong>Cash on Delivery</strong>
+                </p>
+            </div>
+        </div>
+</div>
+{% endblock %}

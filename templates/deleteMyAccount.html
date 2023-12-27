@@ -1,0 +1,55 @@
+{% extends "index.html" %}
+
+{% block title %}Delete My Account {% endblock %}
+{% block content %}
+<div class="container my-5">
+          <div class="my-2">
+            <h2><b> Close Your LocalShop Account </b></h2>
+            <hr />
+            <strong>
+                Please read this carefully
+            </strong>
+            <div class="my-3">
+                <p>
+                    You are about to submit a request for us to permanently close your LocalShop account and delete your data. Once your account is closed all of the products and services accessed through your account will no longer be available to you, across any LocalShop sites globally.
+                </p>
+            </div>
+            <div>
+                <b>If you proceed with this request you will not be able to access products and services associated with your closed account !</b>
+            </div>
+
+            <div class="my-3 card bg-danger border border-danger bg-opacity-10">
+                <div class="card-body">
+                    <h6>Account Closure Is A Permanent Action</h6>
+                    <strong>Please note account closure is a permanent action and once your account is closed it will no longer be available to you and cannot be restored. If you decide later that you want to start ordering from us again or if you would like to use products and services that require an account, you will need to create a new account. </strong>
+                </div>
+            </div>
+            <div class="my-3">
+                <h6><b>Please select the main reason for closing your LocalShop account (Optional) </b></h6>
+                <form action="#" method="get" accept-charset="utf-8">
+                    {% csrf_token %}
+                    <select class="form-select my-3" aria-label="Default select example">
+                        <option selected>Choose Reason</option>
+                        <option value="1">I am not using this account anymore </option>
+                        <option value="2">I have another account </option>
+                        <option value="3">I want to create a new account </option>
+                        <option value="3">Account security concerns/Unauthorised activity </option>
+                        <option value="3">Privacy concerns </option>
+                        <option value="3">I have open issues with LocalShop </option>
+                        <option value="3">I do not want to provide a reason </option>
+                    </select>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault">
+                            <b>Yes, I want to permanently close my LocalShop Account and delete my data. </b>
+                        </label>
+                    </div>
+                    <div class="text-center my-2">
+                        <button type="button" class="btn btn-outline-danger">Delete My Account</button>
+
+                    </div>
+                </form>
+            </div>
+        </div>  
+</div>
+{% endblock %}

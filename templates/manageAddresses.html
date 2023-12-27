@@ -1,0 +1,87 @@
+{% extends "index.html" %}
+
+{% block title %}Manage Address {% endblock %}
+{% block content %}
+
+ <div class="container">
+        <div class="my-2">
+            <h1><b>Manage Addresses</b></h1>
+            <div class="accordion" id="accordionExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            Add New Address
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <form class="row g-3" method="POST" action="/accounts/user/addresses/add">
+                                {% csrf_token %}
+                                <div class="col-md-6">
+                                    <label for="inputBlock" class="form-label">Block</label>
+                                    <input type="text" class="form-control" id="inputBlock" placeholder="B-1">
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="inputFlatNo" class="form-label">Flat No.</label>
+                                    <input type="password" class="form-control" id="inputFlatNo" placeholder="102-D">
+                                </div>
+                                <div class="col-12">
+                                    <label for="inputCommunity" class="form-label">Address</label>
+                                    <input type="text" class="form-control" id="inputCommunity" value="Silver City Themes" disabled>
+                                </div>
+                                <div class="col-12">
+                                    <label for="inputCity" class="form-label">City</label>
+                                    <input type="text" class="form-control" id="inputCity" value="Dera Bassi" disabled>
+                                </div>
+                                <div class="col-12">
+                                    <label for="inputZip" class="form-label">Address</label>
+                                    <input type="text" class="form-control" id="inputZip" value="140201" disabled>
+                                </div>
+
+                                <div class="col-12">
+                                    <button type="submit" class="btn btn-warning">Add</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="my-4">
+            <div class="card">
+                <div class="card-header">
+                    Default
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">B-1, 102-D</h5>
+                    <p class="card-text">
+                        Silver City Themes Dera Bassi
+                    </p>
+                    <p class="card-text">
+                        140201
+                    </p>
+                    <button class="btn btn-outline-danger btn-sm">Remove</button>
+                </div>
+            </div>
+        </div>
+        <div class="my-4">
+            <div class="card">
+                <div class="card-header">
+                    Another Address
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">B-1, 102-D</h5>
+                    <p class="card-text">
+                        Silver City Themes Dera Bassi
+                    </p>
+                    <p class="card-text">
+                        140201
+                    </p>
+                    <button class="btn btn-outline-danger btn-sm">Remove</button>
+                    <button class="btn btn-outline-warning btn-sm">Make Default</button>
+                </div>
+            </div>
+        </div>
+    </div>
+ 
+{% endblock %}

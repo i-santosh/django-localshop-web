@@ -1,0 +1,32 @@
+{% extends "index.html" %}
+
+{% block title %}Email Alert Preferences {% endblock %}
+{% block content %}
+<div class="container my-5">
+          <div class="my-2">
+            <h2><b> Email Alert Preferences </b></h2>
+            <hr />
+            <div class="card">
+                <div class="card-header">
+                    Your Email Alert Preferences
+                </div>
+                <div class="card-body">
+                    <div class="my-2 card bg-info border-info text-center text-secondary bg-opacity-10">
+                        <div class="card-body">
+                            <strong>You are subscribed</strong>
+                        </div>
+                    </div>
+                    <p class="card-text">
+                        You will receive Email Alerts when your package is shipped, out for delivery, delivered, encounters a problem or assisting you on payment failures. Email Alerts will be sent to the following Email:
+                    </p>
+                </div>
+                <div class="my-2 mx-2">
+                    <b>{{ request.user.email }}</b>
+                </div>
+                <div class="text-center my-3">
+                    <button type="button" class="btn btn-outline-warning">Change</button>
+                </div>
+            </div>
+        </div>
+</div>
+{% endblock %}

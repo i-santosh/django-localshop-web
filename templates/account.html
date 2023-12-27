@@ -1,0 +1,94 @@
+{% extends "index.html" %}
+
+{% block title %}Your Account {% endblock %}
+{% block content %}
+<div class="container my-5">
+    <h2><b>Your Account</b></h2>
+    <div class="my-5">
+        <h4>Your Orders</h4>
+        <ul class="list-group">
+            <a href="/accounts/user/orders">
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    Your Orders
+                    <i class="fa-solid fa-circle-chevron-down fa-rotate-270"></i>
+                </li>
+            </a>
+            <a href="/accounts/user/subscribeAndSave">
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    Subscribe and save
+                    <i class="fa-solid fa-circle-chevron-down fa-rotate-270"></i>
+                </li>
+            </a>
+        </ul>
+    </div>
+
+    <div class="my-5">
+        <h4>Account Settings</h4>
+        <ul class="list-group">
+            <a href="/accounts/user/editProfile">
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    Edit Your Profile
+                    <i class="fa-solid fa-circle-chevron-down fa-rotate-270"></i>
+                </li>
+            </a>
+            <a href="/accounts/user/manageAddresses">
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    Manage addresses
+                    <i class="fa-solid fa-circle-chevron-down fa-rotate-270"></i>
+                </li>
+            </a>
+            <a href="/accounts/user/purchaseSettings">
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    Default Purchase Settings
+                    <i class="fa-solid fa-circle-chevron-down fa-rotate-270"></i>
+                </li>
+            </a>
+            <a href="/accounts/user/emailAlertPreferences">
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    Email alert preferences
+                    <i class="fa-solid fa-circle-chevron-down fa-rotate-270"></i>
+                </li>
+            </a>
+            <a href="/accounts/user/deleteMyAccount">
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    Delete My Account
+                    <i class="fa-solid fa-circle-chevron-down fa-rotate-270"></i>
+                </li>
+            </a>
+        </ul>
+    </div>
+
+    <div class="my-5">
+        <h4>Customer Service</h4>
+        <ul class="list-group">
+            <a href="/accounts/user/contactUs">
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    Contact Us
+                    <i class="fa-solid fa-circle-chevron-down fa-rotate-270"></i>
+                </li>
+            </a>
+            <a href="/accounts/user/feedback">
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    Feedback
+                    <i class="fa-solid fa-circle-chevron-down fa-rotate-270"></i>
+                </li>
+            </a>
+        </ul>
+    </div>
+
+    <div class="my-5">
+        <h4>Data and Privacy</h4>
+        <ul class="list-group">
+            <a href="/accounts/user/privacyNotice"><li class="list-group-item d-flex justify-content-between align-items-center">
+                Privacy Notice
+                <i class="fa-solid fa-circle-chevron-down fa-rotate-270"></i>
+            </li></a>
+        </ul>
+    <div class="py-2 text-center ">
+      <a href="/accounts/signout" class="btn btn-outline-danger">Sign Out</a>
+    </div>
+
+    </div>
+
+</div>
+{% endblock %}
